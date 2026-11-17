@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f5f8fc">
+    <title>Historia clínica | Hospital Vida</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="app-layout">
+        <aside class="sidebar">
+            <a class="brand" href="../index.html" aria-label="Hospital Vida, inicio">
+                <span class="brand-mark" aria-hidden="true">+</span>
+                <span class="brand-copy">Hospital <strong>Vida</strong><small>PORTAL DE ATENCIÓN</small></span>
+            </a>
+            <p class="sidebar-caption">ESPACIO PERSONAL</p>
+            <nav class="side-nav" aria-label="Navegación principal">
+                <a class="side-link" href="../index.html"><span class="nav-icon" aria-hidden="true">⌂</span> Inicio</a>
+                <a class="side-link is-active" href="./historia-clinica.html">
+                    <span class="nav-icon" aria-hidden="true">＋</span> Historia clínica
+                    <span class="side-arrow" aria-hidden="true">›</span>
+                </a>
+            </nav>
+            <div class="sidebar-note">
+                <span class="online-indicator"></span>
+                <div><strong>Entorno de práctica</strong><small>Servicio local de demostración</small></div>
+            </div>
+        </aside>
+
+        <div class="main-column">
+            <header class="topbar">
+                <span class="topbar-label"><a href="../index.html">Portal del paciente</a> <span class="breadcrumb-divider">/</span> Historia clínica</span>
+                <div class="profile-chip"><span class="profile-avatar">HV</span><span>Hospital Vida</span></div>
+            </header>
+
+            <main class="page-content form-page">
+                <section class="form-intro">
+                    <span class="eyebrow"><span class="eyebrow-dot"></span> PREPAREMOS TU ATENCIÓN</span>
+                    <h1>Tu historia, con cuidado.</h1>
+                    <p>Completa estos datos de ejemplo para conocer el flujo de registro de una historia clínica.</p>
+                </section>
+
+                <div class="form-layout">
+                    <form id="historia-clinica-form" class="form-card">
+                        <div class="form-card-heading">
+                            <div><span class="step-label">PASO 1 DE 1</span><h2>Información para tu consulta</h2></div>
+                            <span class="required-hint"><span aria-hidden="true">*</span> Campos obligatorios</span>
+                        </div>
+
+                        <fieldset class="form-section">
+                            <legend><span class="section-number">01</span><span><strong>Datos personales</strong><small>Información básica de contacto</small></span></legend>
+                            <div class="field-grid">
+                                <label class="field field-wide" for="nombre"><span>Nombre completo <span class="required-mark">*</span></span>
+                                    <input type="text" id="nombre" name="nombre" placeholder="Ej. María García" autocomplete="name" maxlength="120" required>
+                                </label>
+                                <label class="field" for="cedula"><span>Cédula <span class="required-mark">*</span></span>
+                                    <input type="text" id="cedula" name="cedula" placeholder="10 dígitos" inputmode="numeric" pattern="[0-9]{10}" maxlength="10" required>
+                                </label>
+                                <label class="field" for="fecha_nacimiento"><span>Fecha de nacimiento <span class="required-mark">*</span></span>
+                                    <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" autocomplete="bday" required>
+                                </label>
+                                <label class="field" for="email"><span>Correo electrónico <span class="required-mark">*</span></span>
+                                    <input type="email" id="email" name="email" placeholder="nombre@correo.com" autocomplete="email" maxlength="254" required>
+                                </label>
+                                <label class="field" for="telefono">Teléfono
+                                    <input type="tel" id="telefono" name="telefono" placeholder="+593 99 000 0000" autocomplete="tel" maxlength="30">
+                                </label>
+                                <label class="field" for="ciudad">Ciudad
+                                    <select name="ciudad" id="ciudad">
+                                        <option value="">Selecciona una ciudad</option>
+                                        <option value="Quito">Quito</option>
+                                        <option value="Latacunga">Latacunga</option>
+                                        <option value="Ibarra">Ibarra</option>
+                                        <option value="Cuenca">Cuenca</option>
+                                        <option value="Otra">Otra</option>
+                                    </select>
+                                </label>
+                                <label class="field" for="cargas">Cargas familiares
+                                    <input type="number" id="cargas" name="cargas" min="0" max="20" placeholder="0">
+                                </label>
+                                <label class="field" for="genero">Género
+                                    <select name="genero" id="genero">
+                                        <option value="">Prefiero no indicarlo</option>
+                                        <option value="femenino">Femenino</option>
+                                        <option value="masculino">Masculino</option>
+                                        <option value="otro">Otro</option>
+                                    </select>
+                                </label>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="form-section">
+                            <legend><span class="section-number">02</span><span><strong>Motivo de consulta</strong><small>Ayúdanos a entender qué necesitas</small></span></legend>
+                            <div class="field-grid">
+                                <label class="field" for="sangre">Tipo de sangre
+                                    <select name="sangre" id="sangre">
+                                        <option value="">No lo sé</option>
+                                        <option value="O+">O+</option><option value="O-">O−</option>
+                                        <option value="A+">A+</option><option value="A-">A−</option>
+                                        <option value="B+">B+</option><option value="B-">B−</option>
+                                        <option value="AB+">AB+</option><option value="AB-">AB−</option>
+                                    </select>
+                                </label>
+                                <label class="field" for="especialidad">Especialidad de interés
+                                    <input list="lista-especialidades" id="especialidad" name="especialidad" placeholder="Escribe o selecciona">
+                                    <datalist id="lista-especialidades">
+                                        <option value="Medicina general"><option value="Pediatría">
+                                        <option value="Cardiología"><option value="Traumatología">
+                                        <option value="Ginecología"><option value="Dermatología">
+                                    </datalist>
+                                </label>
+                                <label class="field field-wide" for="motivo">¿Cómo podemos ayudarte?
+                                    <textarea name="motivo" id="motivo" rows="4" maxlength="2000" placeholder="Describe brevemente el motivo de tu consulta"></textarea>
+                                </label>
+                                <div class="field field-wide">
+                                    <div class="range-heading"><label for="dolor">Nivel de dolor</label><span class="range-value"><output id="valorDolor">0</output><small> / 10</small></span></div>
+                                    <input class="pain-range" type="range" id="dolor" name="dolor" min="0" max="10" value="0">
+                                    <div class="range-labels"><span>Sin dolor</span><span>Muy intenso</span></div>
+                                </div>
+                                <label class="field field-wide" for="cita">Fecha y hora preferida para tu cita
+                                    <input type="datetime-local" id="cita" name="cita">
+                                </label>
+                            </div>
+                        </fieldset>
+
+                        <div class="form-actions">
+                            <button class="button button-primary submit-button" type="submit">Guardar información <span aria-hidden="true">→</span></button>
+                            <button class="button button-quiet" type="reset">Limpiar formulario</button>
+                        </div>
+                        <p id="form-message" class="form-message" role="status" aria-live="polite"></p>
+                    </form>
+
+                    <aside class="form-aside">
+                        <article class="aside-card reassurance-card">
+                            <span class="aside-symbol" aria-hidden="true">✦</span>
+                            <span class="eyebrow muted-eyebrow">CONTIGO EN CADA PASO</span>
+                            <h2>Una atención que empieza por escucharte.</h2>
+                            <p>Compartir tus preferencias nos ayuda a preparar una experiencia más cercana.</p>
+                            <div class="aside-divider"></div>
+                            <div class="aside-detail"><span class="detail-check">✓</span><span>Completa los campos marcados como obligatorios.</span></div>
+                            <div class="aside-detail"><span class="detail-check">✓</span><span>Podrás elegir una especialidad y horario preferido.</span></div>
+                        </article>
+                        <article class="demo-warning">
+                            <span class="notice-icon" aria-hidden="true">!</span>
+                            <div><strong>Formulario de demostración</strong><p>Usa sólo datos ficticios. Esta práctica no ofrece autenticación ni está preparada para información clínica real. En GitHub Pages el formulario no puede guardar datos porque el backend no está desplegado.</p></div>
+                        </article>
+                    </aside>
+                </div>
+                <footer class="page-footer"><span>Hospital Vida <span aria-hidden="true">·</span> Portal de atención</span><span>Proyecto de práctica</span></footer>
+            </main>
+        </div>
+    </div>
+    <script src="/historia-clinica.js" defer></script>
+</body>
+</html>

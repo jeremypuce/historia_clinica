@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f5f8fc">
+    <title>Hospital Vida | Portal de atención</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="app-layout">
+        <aside class="sidebar">
+            <a class="brand" href="./index.html" aria-label="Hospital Vida, inicio">
+                <span class="brand-mark" aria-hidden="true">+</span>
+                <span class="brand-copy">Hospital <strong>Vida</strong><small>PORTAL DE ATENCIÓN</small></span>
+            </a>
+            <p class="sidebar-caption">ESPACIO PERSONAL</p>
+            <nav class="side-nav" aria-label="Navegación principal">
+                <a class="side-link is-active" href="./index.html">
+                    <span class="nav-icon" aria-hidden="true">⌂</span> Inicio
+                </a>
+                <a class="side-link" href="./formulario/historia-clinica.html">
+                    <span class="nav-icon" aria-hidden="true">＋</span> Historia clínica
+                    <span class="side-arrow" aria-hidden="true">›</span>
+                </a>
+            </nav>
+            <div class="sidebar-note">
+                <span class="online-indicator"></span>
+                <div><strong>Entorno de práctica</strong><small>Servicio local de demostración</small></div>
+            </div>
+        </aside>
+
+        <div class="main-column">
+            <header class="topbar">
+                <span class="topbar-label">Portal del paciente <span class="breadcrumb-divider">/</span> Inicio</span>
+                <div class="profile-chip"><span class="profile-avatar">HV</span><span>Hospital Vida</span></div>
+            </header>
+
+            <main class="page-content">
+                <section class="welcome-card">
+                    <div class="welcome-copy">
+                        <span class="eyebrow"><span class="eyebrow-dot"></span> CUIDADO CERCANO, SIEMPRE</span>
+                        <h1>Tu bienestar,<br>en buenas manos.</h1>
+                        <p>Un espacio sencillo para compartir la información necesaria y preparar mejor tu atención.</p>
+                        <a class="button button-primary" href="./formulario/historia-clinica.html">
+                            Completar historia clínica <span aria-hidden="true">→</span>
+                        </a>
+                    </div>
+                    <div class="welcome-art" aria-hidden="true">
+                        <div class="art-orbit orbit-one"></div>
+                        <div class="art-orbit orbit-two"></div>
+                        <div class="art-glow"></div>
+                        <div class="art-cross">+</div>
+                        <div class="art-card">
+                            <span class="art-pulse">✳</span>
+                            <span><strong>Atención</strong><small>centrada en ti</small></span>
+                            <span class="art-check">✓</span>
+                        </div>
+                        <span class="art-spark spark-one">✦</span>
+                        <span class="art-spark spark-two">✧</span>
+                    </div>
+                </section>
+
+                <section class="section-heading">
+                    <div><span class="eyebrow muted-eyebrow">TU ESPACIO DE SALUD</span><h2>¿Qué necesitas hoy?</h2></div>
+                    <span class="section-aside">Un paso a la vez, estamos contigo.</span>
+                </section>
+
+                <section class="action-grid" aria-label="Acciones disponibles">
+                    <a class="action-card" href="./formulario/historia-clinica.html">
+                        <span class="action-icon icon-blue" aria-hidden="true">▤</span>
+                        <span class="action-card-copy"><strong>Historia clínica</strong><small>Comparte tus datos para preparar tu consulta.</small></span>
+                        <span class="action-arrow" aria-hidden="true">↗</span>
+                    </a>
+                    <article class="action-card info-card">
+                        <span class="action-icon icon-green" aria-hidden="true">♡</span>
+                        <span class="action-card-copy"><strong>Atención a tu medida</strong><small>Cuéntanos qué necesitas y cuándo prefieres tu cita.</small></span>
+                        <span class="action-arrow" aria-hidden="true">✦</span>
+                    </article>
+                </section>
+
+                <section class="bottom-grid">
+                    <article class="journey-card">
+                        <div class="journey-icon" aria-hidden="true">01</div>
+                        <div><span class="eyebrow muted-eyebrow">TU PRÓXIMO PASO</span><h2>Cuéntanos un poco sobre ti</h2><p>Completa el formulario de práctica y explora cómo una API REST guarda la información.</p></div>
+                        <a class="text-link" href="./formulario/historia-clinica.html">Ir al formulario <span aria-hidden="true">→</span></a>
+                    </article>
+                    <aside class="demo-notice">
+                        <span class="notice-icon" aria-hidden="true">i</span>
+                        <div><strong>Demostración educativa</strong><p>API preparada con Prisma ORM y Supabase. No introduzcas datos reales.</p></div>
+                    </aside>
+                </section>
+                <footer class="page-footer"><span>Hospital Vida <span aria-hidden="true">·</span> Portal de atención</span><span>Proyecto de práctica</span></footer>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
