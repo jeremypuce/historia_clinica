@@ -60,6 +60,8 @@ Abre <http://127.0.0.1:5173>. Vite reenvía las peticiones `/api` al backend en 
 
 ## Publicación en GitHub Pages
 
-El workflow `.github/workflows/pages.yml` construye `frontend/` con Node.js 22 y publica el artefacto de Vite en cada push a `main` que cambie el frontend. La URL del sitio será <https://jeremypuce.github.io/historia_clinica/>.
+El workflow `.github/workflows/pages.yml` construye `frontend/` con Node.js 22 y publica el artefacto de Vite en cada push a `main`. La URL del sitio será <https://jeremypuce.github.io/historia_clinica/>.
+
+Antes del primer despliegue, un administrador del repositorio debe abrir **Settings → Pages** y seleccionar **GitHub Actions** como origen de compilación. Después, los pushes a `main` publican el sitio automáticamente.
 
 GitHub Pages sólo aloja contenido estático: no ejecuta Express ni conecta PostgreSQL. El formulario se muestra como demostración y su envío está desactivado en la publicación de Pages. Para guardar datos se necesita desplegar el backend y configurar su API por separado.
