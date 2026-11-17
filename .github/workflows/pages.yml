@@ -70,3 +70,18 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+      - name: Smoke test the published homepage
+        env:
+          PAGES_URL: ${{ steps.deployment.outputs.page_url }}
+        run: |
+          for attempt in $(seq 1 12); do
+            if curl --fail --silent --max-time 15 "$PAGES_URL" | grep -Fq "Portal de atención"; then
+              echo "GitHub Pages is serving the expected frontend."
+              exit 0
+            fi
+            echo "Pages content check attempt $attempt/12 did not pass; retrying."
+            sleep 10
+          done
+          echo "::error::GitHub Pages is not serving the expected frontend."
+          exit 1
