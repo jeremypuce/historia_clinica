@@ -41,6 +41,14 @@ jobs:
         env:
           GITHUB_PAGES: "true"
 
+      - name: Verify generated Pages files and base paths
+        run: |
+          test -s dist/index.html
+          test -s dist/formulario/historia-clinica.html
+          test -s dist/styles.css
+          test -s dist/historia-clinica.js
+          grep -Fq "/${GITHUB_REPOSITORY##*/}/styles.css" dist/index.html
+
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
 
